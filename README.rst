@@ -38,6 +38,7 @@ What do I need?
 Code is tested on Windows Python 3 environment.
 
 First install all dependencies then install repo and enter command::
+
   labchartio --filename=./test_file.bin`
 
 
@@ -51,7 +52,7 @@ How do I install labchartio?
 --------------------
 The simplest way to install labchartio is via pip::
 
-pip install git+https://github.com/jamie-roberts/labchartio.git
+  pip install git+https://github.com/jamie-roberts/labchartio.git
 
 or by downloading zip from `repo <https://github.com/jamie-roberts/labchartio/>`_ and running `python setup.py install` form within repo.
 
