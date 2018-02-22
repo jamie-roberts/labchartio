@@ -17,7 +17,7 @@ dependencies = [
 
 setup(
     name='labchartio',
-    version='0.1',
+    version='0.1a',
     description='Binary decoder for MRI field dosimeter LabChart binary files.',
     long_description=readme('README.rst'),
     author='Jamie Roberts',
