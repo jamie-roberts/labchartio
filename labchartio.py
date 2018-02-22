@@ -10,8 +10,14 @@ Examples:
 
 Command line example:
 
-    >>> python labchartio.py --help
-    >>> python labchartio.py --filename=test_data.bin
+    >>> labchartio --help
+    >>> labchartio --filename=test_data.bin
+
+
+A set of python commands to read in the generated CSV into a pandas dataframe.
+    >>> import pandas as pd
+    >>> fname = "test_data.bin"
+    >>> pd.read_csv((fname + ".csv"), index_col=0).head()
 
 High level example:
     
@@ -39,18 +45,16 @@ A minimal working example to show how the header file  reading feature of the la
     >>> file_tags.append(list_file_header[11])
     >>> file_tags # secPerTick, year, month, day, hour, minute, seconds, samplesPerChannel
 
-
 """
 from __future__ import division, absolute_import, print_function
 
-import logging
-
 import struct
-
 import re
+import logging
+from datetime import datetime, timedelta
+
 import numpy as np
 import pandas as pd
-from datetime import datetime, timedelta
 import click
 
 # from IPython import embed # embed() # Open terminal instance during execution
@@ -235,15 +239,21 @@ def create_timestamp_index(timestamp, data):
 @click.command()
 @click.option('--filename', help='Name of LabChart binary file.')       
 def write_csv(filename):
-    click.echo('Reading/Writing file.'.format(filename))
-    data= read_channels(filename=filename)
-    data.to_csv((filename + '.csv'))
-    click.echo('Done.')
-    click.echo('Written CSV to "{0}.csv"'.format(filename))
-    click.echo('You may read csv using script:')
-    click.echo('>>> import pandas as pd')
-    click.echo('>>> fname = "test_data.bin"')
-    click.echo('>>> pd.read_csv((fname + ".csv"), index_col=0).head()')
+    if filename == '' or filename == None:
+        click.echo('labchartio is a command line app to write Labchart MRI binary file to CSV.')
+        click.echo('Call:')
+        click.echo('>>> labchartio --filename=test_data.bin')
+        click.echo('>>> labchartio --help')
+    else:
+        click.echo('Reading/Writing file.'.format(filename))
+        data= read_channels(filename=filename)
+        data.to_csv((filename + '.csv'))
+        click.echo('Done.')
+        click.echo('Written CSV to "{0}.csv"'.format(filename))
+        click.echo('You may read csv using script:')
+        click.echo('>>> import pandas as pd')
+        click.echo('>>> fname = "test_data.bin"')
+        click.echo('>>> pd.read_csv((fname + ".csv"), index_col=0).head()')
 
 def main():
     write_csv()
@@ -253,6 +263,3 @@ if __name__ == "__main__":
     # Execute when run as top level file and setuptools entry point from commandline.
     main()
 
-import pandas as pd
-fname = "test_data.bin"
-pd.read_csv((fname + ".csv"), index_col=0).head()

@@ -36,22 +36,23 @@ The code ships with no tests yet and requires some work, but it is in a good eno
 
 What do I need?
 ---------------
-Code is tested on Windows. Wants Python 3 environment.
+Code is tested on Windows Python 3 environment.
 
-Install all dependencies first then clone repo and run from it.
+First install all dependencies then install repo and enter command `labchartio --filename=./test_file.bin`
 
 
 How do I install python?
 ------------------------
 Go to `python.org <https://www.python.org/downloads/>`_ then use pip to install the rest of the dependencies::
 
-  pip install numpy pandas datetime click
+  pip install numpy pandas click
 
 How do I install labchartio?
 --------------------
-The simplest way to install labchartio is by downloading zip from repo from::
+The simplest way to install labchartio is via pip::
 
-
+`pip install git+https://github.com/jamie-roberts/labchartio.git`
+by downloading zip from `repo <https://github.com/jamie-roberts/labchartio/>`_
 
 
 Where can I get help?
