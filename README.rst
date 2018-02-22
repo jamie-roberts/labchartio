@@ -39,7 +39,7 @@ Code is tested on Windows Python 3 environment.
 
 First install all dependencies then install repo and enter command::
 
-  labchartio --filename=./test_file.bin`
+  labchartio --filename=./test_file.bin
 
 
 How do I install python?
