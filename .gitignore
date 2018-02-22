@@ -1,0 +1,35 @@
+# Notebooks #
+#############
+*.ipynb
+.ipynb_checkpoints
+
+# Compiled source #
+##################
+*.pyc
+
+# Build #
+###########
+build/
+bin/
+.eggs/
+labchartio.egg-info/
+*egg
+
+# Data #
+########
+*.csv
+
+# python #
+##########
+__pycache__/
+.cache/
+
+# Code coverage reports #
+#########################
+.coverage
+
+# Data #
+########
+
+test_data.bin
+test_data.bin.csv

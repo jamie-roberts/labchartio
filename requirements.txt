@@ -1,0 +1,10 @@
+# General requirements
+
+click>=4.0
+numpy>=1.11
+pandas>=0.18
+
+# testing + bulding requirements
+setuptools>=33.0
+pytest>=3.0
+

@@ -1,0 +1,3 @@
+# Bundle important meta data
+include LICENSE
+include README.rst
