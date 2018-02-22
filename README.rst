@@ -11,7 +11,7 @@ How does it work?
 -----------------
 The binary format standard is available from LabChart so this package just implements the binary unpacking and reading into a pandas dataframe or writes to CSV. The code is presented as a high level command line app.
 
-The CSV will have the 6 channels of data with a time and date stamp in the first column. The data is aggregated to one second intervals by taking the average. If the user requires the ability to write the CSV at its full time resolution of 50 Hz then please either drop me an email or open an issue on the 'issue tracker <https://github.com/jamie-roberts/labchartio/issues>'_ and I will add it as a feature when I get the time. 
+The CSV will have the 6 channels of data with a time and date stamp in the first column. The data is aggregated to one second intervals by taking the average. If the user requires the ability to write the CSV at its full time resolution of 50 Hz then please either drop me an email or open an issue on the `issue tracker <https://github.com/jamie-roberts/labchartio/issues>`_ and I will add it as a feature when I get the time. 
 
 Show me a quick example
 -----------------------
@@ -37,7 +37,8 @@ What do I need?
 ---------------
 Code is tested on Windows Python 3 environment.
 
-First install all dependencies then install repo and enter command `labchartio --filename=./test_file.bin`
+First install all dependencies then install repo and enter command::
+  labchartio --filename=./test_file.bin`
 
 
 How do I install python?
@@ -50,7 +51,8 @@ How do I install labchartio?
 --------------------
 The simplest way to install labchartio is via pip::
 
-`pip install git+https://github.com/jamie-roberts/labchartio.git`
+pip install git+https://github.com/jamie-roberts/labchartio.git
+
 or by downloading zip from `repo <https://github.com/jamie-roberts/labchartio/>`_ and running `python setup.py install` form within repo.
 
 
