@@ -2,6 +2,8 @@
 LabChartIO
 ==========
 
+# WARNING: ABANDONED CODE #
+
 
 What does it do?
 ----------------
